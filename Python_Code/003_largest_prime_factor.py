@@ -17,27 +17,27 @@
 # Any comments welcome!
 #===============================================================================
 
-import math
-
+from math import sqrt
+ 
 def is_prime(num):
     if num==2:
         return True
     elif num==1:
         return False
-    for j in range(2,long(math.sqrt(num)+1)):
+    for j in range(2, long(sqrt(num)+1)):
         if (num % j) == 0:
             return False
     return True
-
-
+ 
 given_number = 600851475143
 i =2
 lpf = -1 
 while i<=given_number:
-    if is_prime(i) & given_number%i ==0:
+    if is_prime(i) & given_number%i == 0:
         lpf = i
-        while given_number%i ==0: # eliminates this factor i
+        while given_number%i == 0: # eliminates this factor i
             given_number /= i
     i += 1
-
+ 
 print(lpf)
+
