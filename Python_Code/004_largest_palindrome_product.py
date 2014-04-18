@@ -9,6 +9,7 @@
 
 
 # Author: Minqiang Li (any comments welcome at myfirstname.mylastname@gmail.com!
+# https://github.com/minqiang/ProjectEuler
 
 #===============================================================================
 # The program uses brute-force looping using two indices i, j where i<j.
