@@ -33,7 +33,7 @@ given_number = 600851475143
 i =2
 lpf = -1 
 while i<=given_number:
-    if is_prime(i) & given_number%i == 0:
+    if is_prime(i) and given_number%i == 0:
         lpf = i
         while given_number%i == 0: # eliminates this factor i
             given_number /= i
