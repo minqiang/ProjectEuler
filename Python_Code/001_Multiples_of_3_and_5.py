@@ -6,8 +6,11 @@
 # Author: Minqiang Li
 ## https://github.com/minqiang/ProjectEuler
 
-answer = [x for x in range(1000) if (x%3==0 or x%5==0)]
-result = 0
-for i in answer: 
-    result += i
-print result
+#===============================================================================
+# Tested using larger limit and it shows that reduce is slightly
+# faster than a for loop.
+#===============================================================================
+
+multiples = [x for x in range(1000) if (x%3==0 or x%5==0)]
+result = reduce(lambda a,b: a+b, multiples)
+print(result)
