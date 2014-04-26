@@ -120,5 +120,5 @@ data = open('../Data_Files/problem013.txt')
 num_list = [long(line) for line in data]
 
 # We use functional programming below
-total = reduce(lambda x, y: x+y, num_list)
+total = sum(num_list)
 print(int(str(total)[1:10]))
