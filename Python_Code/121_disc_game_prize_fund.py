@@ -41,7 +41,7 @@ from math import factorial
 
 total_turns = 15
 # end of turn 1 outcome probabilities (two outcomes). recorded only numerators.
-# The denominator is always T!
+# The denominator is always (T+1)!
 p = [1,1] 
 
 for T in range(2,total_turns+1):
