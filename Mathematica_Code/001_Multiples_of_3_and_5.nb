@@ -1,0 +1,7 @@
+Timing[
+ n = 999;  a = 3; b = 5; c = LCM[a, b];
+ S1 = Sum[ a i, {i, 1, n/a}] ;
+ S2 = Sum[ b i, {i, 1, n/b}] ;
+ S3 = Sum[ c i, {i, 1, n/c}] ;  (* undo double counting *)
+ S = S1 + S2 - S3
+ ]

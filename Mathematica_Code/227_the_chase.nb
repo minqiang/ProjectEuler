@@ -1,0 +1,15 @@
+Clear["Global`*"];
+Timing[
+ n = 100;
+ mat = SparseArray[{Band[{2, 1}] -> 1/6, Band[{1, 1}] -> 4/6, 
+    Band[{1, 2}] -> 1/6}, n];
+ mat[[n, 1]] = 1/6;
+ mat[[1, n]] = 1/6;
+ P = mat.mat;
+ Q =  IdentityMatrix[n - 1] - P[[ 1 ;; n - 1, 1 ;; n - 1]];
+ b = Table[ 1, {i, 1, n - 1}];
+ c = LinearSolve[ Q, b];
+ N[c[[n/2]], 11]
+ ]
+
+{0.01600000000000001, 3780.618622}
